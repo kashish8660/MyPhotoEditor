@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyPhotoEditor</string>
+    <string name="exp">exp</string>
 </resources>
