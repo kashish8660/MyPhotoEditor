@@ -45,14 +45,15 @@ public class MainActivity extends AppCompatActivity {
                 dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, "My Editor");
                 int[] toolsToHide = {DsPhotoEditorActivity.TOOL_ORIENTATION, DsPhotoEditorActivity.TOOL_CROP};
                 dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
-                Log.d("toast",data.getData().toString() );
+//                Log.d("toast",data.getData().toString() );
                 startActivityForResult(dsPhotoEditorIntent, 200);
             }
         }
         if (requestCode==200){
-            Intent intent = new Intent(this, FinalActivity.class);
-            intent.setData(data.getData());
-            Log.d("toast123", data.getData().toString() );
+            Intent intent = new Intent(MainActivity.this, FinalActivity.class);
+            Uri filepath= data.getData();
+            intent.setData(filepath);
+//            Log.d("toast123", filepath.toString() );
 //            Toast.makeText(this, data.getData().toString(), Toast.LENGTH_LONG).show();
             startActivity(intent);
         }

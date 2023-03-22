@@ -20,7 +20,7 @@ ActivityFinalBinding binding;
         super.onCreate(savedInstanceState);
         binding = ActivityFinalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+//        Log.d("toast123", getIntent().getData().toString() );
         binding.imageView3.setImageURI(getIntent().getData());
-
     }
 }
